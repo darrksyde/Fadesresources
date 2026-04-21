@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from './UIComponents';
+import AppDownloadButton from './AppDownloadButton';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,9 +106,7 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
               <div className="pt-8 grid gap-4">
-                 <Button className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
-                   Download Farmer App
-                 </Button>
+                 
                  <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer" className="w-full">
                    <Button className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
                      Farmers Login

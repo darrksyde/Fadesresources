@@ -6,6 +6,7 @@ import {
 } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import { Button, Card, CardHeader, CardTitle, CardContent, Badge } from '../components/UIComponents';
+import AppDownloadButton from '../components/AppDownloadButton';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
@@ -206,10 +207,10 @@ const Home: React.FC = () => {
 
               <Reveal delay={0.6}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="w-full sm:w-auto rounded-full text-base font-bold h-14 px-8 shadow-[0_0_30px_rgba(41,135,92,0.4)] hover:shadow-[0_0_40px_rgba(41,135,92,0.6)]">
+                  <AppDownloadButton size="lg" className="w-full sm:w-auto rounded-full text-base font-bold h-14 px-8 shadow-[0_0_30px_rgba(41,135,92,0.4)] hover:shadow-[0_0_40px_rgba(41,135,92,0.6)]">
                     <Download className="w-5 h-5 mr-2" />
                     Download the App
-                  </Button>
+                  </AppDownloadButton>
                   <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full rounded-full text-base font-bold h-14 px-8 bg-white/5 border border-white/20 !text-white hover:bg-white hover:!text-fades-dark backdrop-blur-sm">
                       <User className="w-5 h-5 mr-2" />
@@ -898,9 +899,9 @@ const Home: React.FC = () => {
                    <h2 className="text-5xl font-serif font-bold mb-6">Start your journey with FADES today</h2>
                    <p className="text-xl text-green-100 mb-10">One app. One ecosystem. Endless possibilities.</p>
                    <div className="flex flex-col sm:flex-row justify-center gap-6">
-                      <Button size="lg" className="bg-white !text-fades-green hover:bg-gray-100 h-14 px-10 rounded-full font-bold">
+                      <AppDownloadButton size="lg" className="bg-white !text-fades-green hover:bg-gray-100 h-14 px-10 rounded-full font-bold">
                          Download Farmer App
-                      </Button>
+                      </AppDownloadButton>
                       <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 h-14 px-10 rounded-full font-bold bg-transparent">
                            Become an Agent

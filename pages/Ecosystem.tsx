@@ -3,6 +3,7 @@ import Reveal from '../components/Reveal';
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, Users, Truck, ShoppingCart, Building2, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button, Card, Badge } from '../components/UIComponents';
+import AppDownloadButton from '../components/AppDownloadButton';
 
 type Stakeholder = 'farmers' | 'agents' | 'suppliers' | 'buyers' | 'govt';
 
@@ -21,6 +22,7 @@ const Ecosystem: React.FC = () => {
       ],
       cta: "Download the App",
       ctaLink: "",
+      isAppDownload: true,
       secondaryCta: "Farmers Web Login",
       secondaryCtaLink: "https://web.fadesresources.org/signup",
       color: "bg-fades-green",
@@ -38,6 +40,7 @@ const Ecosystem: React.FC = () => {
       ],
       cta: "Agent Login",
       ctaLink: "https://agent.fadesresources.org/login",
+      isAppDownload: false,
       secondaryCta: "",
       secondaryCtaLink: "",
       color: "bg-fades-brown",
@@ -55,6 +58,7 @@ const Ecosystem: React.FC = () => {
       ],
       cta: "Partner With Us",
       ctaLink: "",
+      isAppDownload: false,
       secondaryCta: "",
       secondaryCtaLink: "",
       color: "bg-blue-600",
@@ -72,6 +76,7 @@ const Ecosystem: React.FC = () => {
       ],
       cta: "Get the App",
       ctaLink: "",
+      isAppDownload: false,
       secondaryCta: "",
       secondaryCtaLink: "",
       color: "bg-purple-600",
@@ -92,6 +97,7 @@ const Ecosystem: React.FC = () => {
       icon: <Building2 className="w-6 h-6" />,
       image: "https://images.unsplash.com/photo-1576669801775-ffdeb440e190?q=80&w=1000&auto=format&fit=crop",
       ctaLink: "",
+      isAppDownload: false,
       secondaryCta: "",
       secondaryCtaLink: ""
     }
@@ -181,7 +187,12 @@ const Ecosystem: React.FC = () => {
                     </ul>
 
                     <div className="flex flex-wrap gap-3">
-                      {content[activeTab].ctaLink ? (
+                      {content[activeTab].isAppDownload ? (
+                        <AppDownloadButton className={`${content[activeTab].color} border-none`}>
+                          {content[activeTab].cta}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </AppDownloadButton>
+                      ) : content[activeTab].ctaLink ? (
                         <a href={content[activeTab].ctaLink} target="_blank" rel="noopener noreferrer">
                           <Button className={`${content[activeTab].color} border-none`}>
                             {content[activeTab].cta}

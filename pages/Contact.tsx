@@ -2,10 +2,17 @@ import React from 'react';
 import Reveal from '../components/Reveal';
 import { Mail, MapPin, Phone, Send, ArrowRight } from 'lucide-react';
 import { Button, Input, Label, Textarea, Card, CardContent } from '../components/UIComponents';
+import { useAppDownload, AppDownloadModal } from '../components/AppDownloadButton';
+import { AnimatePresence } from 'framer-motion';
 
 const Contact: React.FC = () => {
+  const { handleClick: handleDownloadClick, showModal, closeModal } = useAppDownload();
+
   return (
     <div className="pt-20 bg-fades-light min-h-screen">
+      <AnimatePresence>
+        {showModal && <AppDownloadModal onClose={closeModal} />}
+      </AnimatePresence>
       <section className="bg-fades-dark text-white py-24">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <Reveal>
@@ -31,7 +38,7 @@ const Contact: React.FC = () => {
                     </p>
 
                     <div className="space-y-4">
-                      <button className="flex items-center justify-between w-full p-5 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-all group text-left">
+                      <button onClick={handleDownloadClick} className="flex items-center justify-between w-full p-5 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-all group text-left">
                         <div>
                             <span className="block font-bold text-lg">Download Farmer App</span>
                             <span className="text-sm text-green-100">Get verified and start growing</span>

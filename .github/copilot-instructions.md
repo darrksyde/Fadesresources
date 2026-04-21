@@ -28,7 +28,53 @@ FADES (Farmers Digital Ecosystem) is a React + TypeScript marketing website buil
 ├── tailwind.config.ts      # Tailwind configuration
 ├── next.config.mjs         # Next.js configuration
 └── postcss.config.mjs      # PostCSS configuration
+├── lib/
+│   └── appConfig.ts        # Global app config (MOBILE_APP_URL etc.)
+├── components/
+│   └── AppDownloadButton.tsx  # App download button/modal system
 ```
+
+## App Download Button System
+
+All "Download the App" / "Download Farmer App" buttons site-wide use a centralised system so enabling the real app link requires **one change only**.
+
+### Activating the app link
+Open `lib/appConfig.ts` and set `MOBILE_APP_URL` to the store URL:
+```ts
+// Before (shows "Coming Soon" modal):
+export const MOBILE_APP_URL: string | null = null;
+
+// After (links directly to the store):
+export const MOBILE_APP_URL = "https://play.google.com/store/apps/details?id=org.fadesresources.app";
+```
+
+### Using the components
+`components/AppDownloadButton.tsx` exports three things:
+
+**1. `AppDownloadButton` (default export)** — drop-in for any `Button`-style download CTA:
+```tsx
+import AppDownloadButton from '../components/AppDownloadButton';
+
+<AppDownloadButton size="lg" className="rounded-full ...">
+  Download the App
+</AppDownloadButton>
+```
+
+**2. `useAppDownload` hook** — for custom-styled triggers (e.g. card buttons):
+```tsx
+import { useAppDownload, AppDownloadModal } from '../components/AppDownloadButton';
+import { AnimatePresence } from 'framer-motion';
+
+const { handleClick, showModal, closeModal } = useAppDownload();
+// ...
+<button onClick={handleClick}>Download Farmer App</button>
+<AnimatePresence>{showModal && <AppDownloadModal onClose={closeModal} />}</AnimatePresence>
+```
+
+**3. `AppDownloadModal`** — standalone modal for manual control.
+
+### Adding a new download button
+Always use `AppDownloadButton` or `useAppDownload` — never hardcode a URL or inline modal for download CTAs.
 
 ## Design System & Conventions
 
