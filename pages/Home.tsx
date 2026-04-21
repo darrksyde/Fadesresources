@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { 
-  ArrowRight, CheckCircle2, Map, Users, TrendingUp, ShieldCheck, Download, 
+  ArrowRight, CheckCircle2, Map, Users, User, TrendingUp, ShieldCheck, Download, 
   Smartphone, Sprout, BarChart3, Leaf, CreditCard, Share2, Database, 
   Cpu, Lock, Globe, Layers, Quote, ChevronLeft, ChevronRight, Star
 } from 'lucide-react';
@@ -206,12 +206,18 @@ const Home: React.FC = () => {
 
               <Reveal delay={0.6}>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="rounded-full text-base font-bold h-14 px-8 shadow-[0_0_30px_rgba(41,135,92,0.4)] hover:shadow-[0_0_40px_rgba(41,135,92,0.6)]">
+                  <Button size="lg" className="w-full sm:w-auto rounded-full text-base font-bold h-14 px-8 shadow-[0_0_30px_rgba(41,135,92,0.4)] hover:shadow-[0_0_40px_rgba(41,135,92,0.6)]">
                     <Download className="w-5 h-5 mr-2" />
                     Download the App
                   </Button>
-                  <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="lg" className="rounded-full text-base font-bold h-14 px-8 bg-white/5 border-white/20 text-white hover:bg-white hover:text-fades-dark backdrop-blur-sm">
+                  <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full rounded-full text-base font-bold h-14 px-8 bg-white/5 border border-white/20 !text-white hover:bg-white hover:!text-fades-dark backdrop-blur-sm">
+                      <User className="w-5 h-5 mr-2" />
+                      Farmers Login
+                    </Button>
+                  </a>
+                  <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                    <Button variant="outline" size="lg" className="w-full rounded-full text-base font-bold h-14 px-8 bg-white/5 border-white/20 text-white hover:bg-white hover:text-fades-dark backdrop-blur-sm">
                       <Users className="w-5 h-5 mr-2" />
                       Become an Agent
                     </Button>

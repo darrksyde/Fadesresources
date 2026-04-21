@@ -108,9 +108,16 @@ const Navbar: React.FC = () => {
                  <Button className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
                    Download Farmer App
                  </Button>
-                 <Button variant="outline" className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
-                   Agent Dashboard
-                 </Button>
+                 <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer" className="w-full">
+                   <Button className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
+                     Farmers Login
+                   </Button>
+                 </a>
+                 <a href="https://agent.fadesresources.org/login" target="_blank" rel="noopener noreferrer" className="w-full">
+                   <Button variant="outline" className="w-full text-lg h-14" onClick={() => setIsOpen(false)}>
+                     Agent Dashboard
+                   </Button>
+                 </a>
               </div>
             </div>
           </motion.div>
