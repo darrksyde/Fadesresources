@@ -63,9 +63,11 @@ const Navbar: React.FC = () => {
                 </Link>
               ))}
             </div>
-            <Button size="sm" className={useScrolledStyle ? '' : 'bg-white text-fades-green hover:bg-white/90 shadow-xl border-none'}>
-              Get Started
-            </Button>
+            <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer">
+              <Button size="sm" className={useScrolledStyle ? '' : 'bg-white !text-fades-green hover:bg-white/90 shadow-xl border-none'}>
+                Get Started
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

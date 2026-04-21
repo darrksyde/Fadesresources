@@ -20,6 +20,9 @@ const Ecosystem: React.FC = () => {
         "Access to financial services via verified data."
       ],
       cta: "Download the App",
+      ctaLink: "",
+      secondaryCta: "Farmers Web Login",
+      secondaryCtaLink: "https://web.fadesresources.org/signup",
       color: "bg-fades-green",
       icon: <User className="w-6 h-6" />,
       image: "https://images.unsplash.com/photo-1605000797499-95a053545e58?q=80&w=1000&auto=format&fit=crop"
@@ -34,6 +37,9 @@ const Ecosystem: React.FC = () => {
         "Build a sustainable livelihood."
       ],
       cta: "Agent Login",
+      ctaLink: "https://agent.fadesresources.org/login",
+      secondaryCta: "",
+      secondaryCtaLink: "",
       color: "bg-fades-brown",
       icon: <Users className="w-6 h-6" />,
       image: "https://images.unsplash.com/photo-1595839213495-2c83d1c15c54?q=80&w=1000&auto=format&fit=crop"
@@ -48,6 +54,9 @@ const Ecosystem: React.FC = () => {
         "Expand market reach effectively."
       ],
       cta: "Partner With Us",
+      ctaLink: "",
+      secondaryCta: "",
+      secondaryCtaLink: "",
       color: "bg-blue-600",
       icon: <Truck className="w-6 h-6" />,
       image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1000&auto=format&fit=crop"
@@ -62,6 +71,9 @@ const Ecosystem: React.FC = () => {
         "Build consistent supply chains."
       ],
       cta: "Get the App",
+      ctaLink: "",
+      secondaryCta: "",
+      secondaryCtaLink: "",
       color: "bg-purple-600",
       icon: <ShoppingCart className="w-6 h-6" />,
       image: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1000&auto=format&fit=crop"
@@ -78,7 +90,10 @@ const Ecosystem: React.FC = () => {
       cta: "Request Partnership",
       color: "bg-gray-700",
       icon: <Building2 className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1576669801775-ffdeb440e190?q=80&w=1000&auto=format&fit=crop"
+      image: "https://images.unsplash.com/photo-1576669801775-ffdeb440e190?q=80&w=1000&auto=format&fit=crop",
+      ctaLink: "",
+      secondaryCta: "",
+      secondaryCtaLink: ""
     }
   };
 
@@ -165,10 +180,29 @@ const Ecosystem: React.FC = () => {
                       ))}
                     </ul>
 
-                    <Button className={`${content[activeTab].color} border-none`}>
-                      {content[activeTab].cta}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                    <div className="flex flex-wrap gap-3">
+                      {content[activeTab].ctaLink ? (
+                        <a href={content[activeTab].ctaLink} target="_blank" rel="noopener noreferrer">
+                          <Button className={`${content[activeTab].color} border-none`}>
+                            {content[activeTab].cta}
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </a>
+                      ) : (
+                        <Button className={`${content[activeTab].color} border-none`}>
+                          {content[activeTab].cta}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      )}
+                      {content[activeTab].secondaryCta && content[activeTab].secondaryCtaLink && (
+                        <a href={content[activeTab].secondaryCtaLink} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline">
+                            {content[activeTab].secondaryCta}
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   {/* Image Side */}

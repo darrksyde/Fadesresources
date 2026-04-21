@@ -40,16 +40,30 @@ const Contact: React.FC = () => {
                             <ArrowRight className="w-4 h-4" />
                         </div>
                       </button>
+
+                      <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer" className="block">
+                        <button className="flex items-center justify-between w-full p-5 bg-white/10 backdrop-blur rounded-xl border border-white/20 hover:bg-white/20 transition-all group text-left">
+                          <div>
+                              <span className="block font-bold text-lg">Farmers Web Login</span>
+                              <span className="text-sm text-green-100">Access your FADES account online</span>
+                          </div>
+                          <div className="bg-white text-fades-green p-2 rounded-full">
+                              <ArrowRight className="w-4 h-4" />
+                          </div>
+                        </button>
+                      </a>
                       
-                      <button className="flex items-center justify-between w-full p-5 bg-fades-brown text-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all group text-left">
-                        <div>
-                            <span className="block font-bold text-lg">Agent Login Dashboard</span>
-                            <span className="text-sm text-orange-100">Manage your farmers & community</span>
-                        </div>
-                        <div className="bg-white/20 text-white p-2 rounded-full">
-                            <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </button>
+                      <a href="https://agent.fadesresources.org/login" target="_blank" rel="noopener noreferrer" className="block">
+                        <button className="flex items-center justify-between w-full p-5 bg-fades-brown text-white rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all group text-left">
+                          <div>
+                              <span className="block font-bold text-lg">Agent Login Dashboard</span>
+                              <span className="text-sm text-orange-100">Manage your farmers & community</span>
+                          </div>
+                          <div className="bg-white/20 text-white p-2 rounded-full">
+                              <ArrowRight className="w-4 h-4" />
+                          </div>
+                        </button>
+                      </a>
                     </div>
                 </Card>
               </Reveal>

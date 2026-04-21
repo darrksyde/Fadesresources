@@ -210,10 +210,12 @@ const Home: React.FC = () => {
                     <Download className="w-5 h-5 mr-2" />
                     Download the App
                   </Button>
-                  <Button variant="outline" size="lg" className="rounded-full text-base font-bold h-14 px-8 bg-white/5 border-white/20 text-white hover:bg-white hover:text-fades-dark backdrop-blur-sm">
-                    <Users className="w-5 h-5 mr-2" />
-                    Become an Agent
-                  </Button>
+                  <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" size="lg" className="rounded-full text-base font-bold h-14 px-8 bg-white/5 border-white/20 text-white hover:bg-white hover:text-fades-dark backdrop-blur-sm">
+                      <Users className="w-5 h-5 mr-2" />
+                      Become an Agent
+                    </Button>
+                  </a>
                 </div>
               </Reveal>
             </div>
@@ -598,9 +600,11 @@ const Home: React.FC = () => {
                 ))}
               </ul>
 
-              <Button size="lg" className="rounded-full px-8">
-                Get your FINcard today
-              </Button>
+              <a href="https://web.fadesresources.org/signup" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="rounded-full px-8">
+                  Get your FINcard today
+                </Button>
+              </a>
             </Reveal>
           </div>
         </div>
@@ -635,9 +639,11 @@ const Home: React.FC = () => {
                   ))}
                 </div>
                 <div className="pt-8">
-                   <Button variant="secondary" className="rounded-full">
-                      Become an Agent
-                   </Button>
+                   <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer">
+                     <Button variant="secondary" className="rounded-full">
+                        Become an Agent
+                     </Button>
+                   </a>
                 </div>
               </Reveal>
             </div>
@@ -886,12 +892,14 @@ const Home: React.FC = () => {
                    <h2 className="text-5xl font-serif font-bold mb-6">Start your journey with FADES today</h2>
                    <p className="text-xl text-green-100 mb-10">One app. One ecosystem. Endless possibilities.</p>
                    <div className="flex flex-col sm:flex-row justify-center gap-6">
-                      <Button size="lg" className="bg-white text-fades-green hover:bg-gray-100 h-14 px-10 rounded-full font-bold">
+                      <Button size="lg" className="bg-white !text-fades-green hover:bg-gray-100 h-14 px-10 rounded-full font-bold">
                          Download Farmer App
                       </Button>
-                      <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 h-14 px-10 rounded-full font-bold bg-transparent">
-                         Become an Agent
-                      </Button>
+                      <a href="https://agent.fadesresources.org/onboarding" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 h-14 px-10 rounded-full font-bold bg-transparent">
+                           Become an Agent
+                        </Button>
+                      </a>
                    </div>
                 </Reveal>
              </div>
