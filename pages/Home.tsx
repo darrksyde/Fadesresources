@@ -893,7 +893,7 @@ const Home: React.FC = () => {
       <section className="py-24">
          <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
            <div className="bg-fades-green text-white relative overflow-hidden rounded-3xl py-16 px-8">
-             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgLjVoNDBNLjUgMHY0MCIvPjwvZz48L3N2Zz4=')] opacity-10"></div>
              <div className="max-w-4xl mx-auto text-center relative z-10">
                 <Reveal>
                    <h2 className="text-5xl font-serif font-bold mb-6">Start your journey with FADES today</h2>

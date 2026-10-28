@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -21,11 +21,15 @@ const Footer: React.FC = () => {
               Empowering Nigeria’s farmers with identity, process, and technology. Building a unified digital ecosystem for a sustainable future.
             </p>
             <div className="flex space-x-4 pt-2">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <a key={index} href="#" className="text-gray-400 hover:text-fades-green transition-colors">
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
+              <a
+                href="https://facebook.com/farmersdigitalecosystem"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="FADES on Facebook"
+                className="text-gray-400 hover:text-fades-green transition-colors"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
@@ -63,11 +67,11 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-fades-brown flex-shrink-0" />
-                <a href="mailto:info@fades.ng" className="hover:text-white">info@fades.ng</a>
+                <a href="mailto:info@fadesresources.org" className="hover:text-white">info@fadesresources.org</a>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-fades-brown flex-shrink-0" />
-                <span>+234 800 FADES NG</span>
+                <a href="tel:+2348118822119" className="hover:text-white">+234 811 882 2119</a>
               </li>
             </ul>
           </div>

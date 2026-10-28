@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-gray-500 uppercase font-bold">Email Us</p>
-                                <p className="text-fades-dark font-medium">info@fades.ng</p>
+                                <a href="mailto:info@fadesresources.org" className="text-fades-dark font-medium hover:text-fades-green transition-colors">info@fadesresources.org</a>
                             </div>
                         </div>
                         <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-gray-500 uppercase font-bold">Call Us</p>
-                                <p className="text-fades-dark font-medium">+234 800 FADES NG</p>
+                                <a href="tel:+2348118822119" className="text-fades-dark font-medium hover:text-fades-green transition-colors">+234 811 882 2119</a>
                             </div>
                         </div>
                     </div>

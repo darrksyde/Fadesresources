@@ -27,7 +27,7 @@ const Ecosystem: React.FC = () => {
       secondaryCtaLink: "https://web.fadesresources.org/signup",
       color: "bg-fades-green",
       icon: <User className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1605000797499-95a053545e58?q=80&w=1000&auto=format&fit=crop"
+      image: "/images/hero 1.webp"
     },
     agents: {
       title: "For Agents (CoBEAs)",
@@ -45,7 +45,7 @@ const Ecosystem: React.FC = () => {
       secondaryCtaLink: "",
       color: "bg-fades-brown",
       icon: <Users className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1595839213495-2c83d1c15c54?q=80&w=1000&auto=format&fit=crop"
+      image: "/images/Community Agent.webp"
     },
     suppliers: {
       title: "Input Suppliers",
@@ -63,7 +63,7 @@ const Ecosystem: React.FC = () => {
       secondaryCtaLink: "",
       color: "bg-blue-600",
       icon: <Truck className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1000&auto=format&fit=crop"
+      image: "/images/hero 2.webp"
     },
     buyers: {
       title: "Buyers & Off-takers",
@@ -81,7 +81,7 @@ const Ecosystem: React.FC = () => {
       secondaryCtaLink: "",
       color: "bg-purple-600",
       icon: <ShoppingCart className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1610348725531-843dff563e2c?q=80&w=1000&auto=format&fit=crop"
+      image: "/images/hero 4.webp"
     },
     govt: {
       title: "Government & NGOs",
@@ -95,7 +95,7 @@ const Ecosystem: React.FC = () => {
       cta: "Request Partnership",
       color: "bg-gray-700",
       icon: <Building2 className="w-6 h-6" />,
-      image: "https://images.unsplash.com/photo-1576669801775-ffdeb440e190?q=80&w=1000&auto=format&fit=crop",
+      image: "/images/hero 3.webp",
       ctaLink: "",
       isAppDownload: false,
       secondaryCta: "",
@@ -107,7 +107,7 @@ const Ecosystem: React.FC = () => {
     <div className="pt-20 min-h-screen bg-fades-light">
       {/* Header */}
       <section className="bg-fades-dark text-white py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMSI+PHBhdGggZD0iTTAgLjVoNDBNLjUgMHY0MCIvPjwvZz48L3N2Zz4=')] opacity-5"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <Reveal>
             <Badge variant="outline" className="border-gray-700 text-gray-300 mb-6">Our Network</Badge>
